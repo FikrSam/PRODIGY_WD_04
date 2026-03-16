@@ -1,16 +1,41 @@
-# React + Vite
+# PRODIGY_WD_04 - React Portfolio Port
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains the React port of the original vanilla HTML/CSS/JS PRODIGY_WD_04 portfolio. The exact terminal-inspired design and snap-scroll behavior has been preserved and modularized into reusable React components.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React 18
+- Vite for fast bundling and development
+- Vanilla CSS (ported exactly from the original `styles.css`)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Structure
+- `src/components/Navbar.jsx`: Fixed top navigation
+- `src/components/Hero.jsx`: Landing section
+- `src/components/About.jsx`: Protocol/Skills section
+- `src/components/Projects.jsx`: Archives/Work grid section
+- `src/components/Contact.jsx`: Signal/Footer section
+- `src/components/CustomCursor.jsx`: The custom tracking mouse sentinel logic extracted into a React `useEffect`
+- `src/index.css`: Global styles, layout formatting, and CSS variables
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To run this application locally:
 
-## Expanding the ESLint configuration
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser and navigate to `http://localhost:5173` to view the site.
+
+## Building for Production
+
+To create a production-ready build:
+```bash
+npm run build
+```
+This will generate optimized assets in the `dist` directory.
